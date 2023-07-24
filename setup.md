@@ -62,7 +62,10 @@ Download and install the free version of IntelliJ IDEA from the official website
   ```
   git add .
   git commit -m "Initial commit"
+  git branch -M master
   git remote add origin <remote repository URL>
+  
+  ## Be careful before running this, make sure you  are running this in your own individual projects.
   git push -u origin master
   ```
 
@@ -78,9 +81,11 @@ Download and install the free version of IntelliJ IDEA from the official website
   def add_numbers(a, b):
       return a + b
   ```
-
+- Create another Python file named test_demo.py in your project folder and add the following code to it:
 
 ```python
+from demo import add_numbers
+
 def test_add_numbers():
     assert add_numbers(2, 3) == 5
     assert add_numbers(-1, 1) == 0
@@ -98,6 +103,14 @@ def test_add_numbers():
 - You should see the test results in the terminal output.
 
 That's it! You've created a Python project with Git and a virtual environment in IntelliJ IDEA, and also executed a simple unit test using pytest. You can continue adding more tests and writing your project code within this setup.
+
+
+**Step 11: Create requirements.txt**
+  - Run the following command in your terminal to freeze your requirements into a file to keep track of it.
+  ```
+  pip freeze > requirements.txt
+  ```
+  - Finally commit everything and push. 
 
 For further reference, you can explore the following resources:
 
